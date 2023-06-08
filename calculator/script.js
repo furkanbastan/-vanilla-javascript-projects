@@ -10,6 +10,7 @@ class Calculator{
         this.operation=undefined;
     }
     delete(){
+        if(this.currentOperand != "") this.currentOperand = this.currentOperand.slice(0,-1);
     }
     appendNumber(number){
         if(number=="." && this.currentOperand.includes(".")) return;
